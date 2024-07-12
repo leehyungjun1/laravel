@@ -1,6 +1,15 @@
 @extends('layout.layout')
 
 @section('content')
+
+@foreach($users as $user)
+    {{$user['name']}}
+    @if($user['age'] < '18')
+        <h1>운전 불가능</h1>
+    @endif
+@endforeach
+
+
 <div class="row">
     <div class="col-3">
         <div class="card overflow-hidden">
